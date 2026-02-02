@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* 
+      Holographic AR Palette
+      Background: Deep Space (Void)
+      Primary: Neon Cyan (Hologram)
+      Secondary: Neon Purple (Energy)
+      Accent: Neon Pink (Highlight)
+    */
+
+    /* Deep Space Background */
+    --background: 260 50% 5%;
+    /* #0c0514 Deep Purple/Black */
+    --foreground: 210 100% 98%;
+    /* Ice White */
+
+    /* Glass Panels */
+    --card: 260 50% 10%;
+    --card-foreground: 210 100% 98%;
+
+    --popover: 260 50% 5%;
+    --popover-foreground: 210 100% 98%;
+
+    /* Neon Cyan - Primary Hologram */
+    --primary: 190 100% 50%;
+    /* #00FFFF */
+    --primary-foreground: 260 50% 5%;
+
+    /* Neon Purple - Secondary Energy */
+    --secondary: 280 100% 60%;
+    /* #B026FF */
+    --secondary-foreground: 210 100% 98%;
+
+    --muted: 260 30% 15%;
+    --muted-foreground: 260 30% 65%;
+
+    /* Neon Pink - Danger/Accent */
+    --accent: 320 100% 60%;
+    /* #FF00CC */
+    --accent-foreground: 210 100% 98%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 100% 98%;
+
+    --border: 260 30% 20%;
+    --input: 260 30% 20%;
+    --ring: 190 100% 50%;
+
+    --radius: 0.75rem;
+    /* Soft rounded corners for friendly AR feel */
+  }
+
+  .dark {
+    /* Same as root for now, enforcing dark theme */
+    --background: 260 50% 5%;
+    --foreground: 210 100% 98%;
+    --card: 260 50% 10%;
+    --card-foreground: 210 100% 98%;
+    --popover: 260 50% 5%;
+    --popover-foreground: 210 100% 98%;
+    --primary: 190 100% 50%;
+    --primary-foreground: 260 50% 5%;
+    --secondary: 280 100% 60%;
+    --secondary-foreground: 210 100% 98%;
+    --muted: 260 30% 15%;
+    --muted-foreground: 260 30% 65%;
+    --accent: 320 100% 60%;
+    --accent-foreground: 210 100% 98%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 100% 98%;
+    --border: 260 30% 20%;
+    --input: 260 30% 20%;
+    --ring: 190 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden;
+    /* Deep Space Gradient */
+    background: radial-gradient(circle at 50% -20%, #1a0b2e 0%, #05020a 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
